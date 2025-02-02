@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconography</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css" media="all">
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        width: 1152px;
+        height: 584px;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter',serif;
+        color: #828282;
+      }
+      .iconography{
+        width: 439px;
+        height: 62px;
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        font-size: 56px;
+        font-weight: 400;
+        color: #828282;
+      }
+      .iconography span{
+        font-weight: 700;
+        color: #223354;
+      }
+      .rules{
+        width: 570px;
+        height: 99px;
+        position: absolute;
+        top: 174px;
+        left: 48px;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38.73px;
+      }
+      .rules .time_image{
+        width: 76px;
+        height: 76px;
+        position: absolute;
+        top: 13px;
+        left: 316px;
+        margin: 0;
+        padding: 0;
+        background: #e0e0e0;
+      }
+      .rules .time_image i{
+        font-size: 76px;
+        vertical-align: middle;
+        text-align: center;
+        border-radius: 50%;
+        color: #333333;
+      }
+      .time_image::after{
+        content: '';
+        width: 96px;
+        height: 99px;
+        background: #efefef;
+        position: absolute;
+        top: -13px;
+        left: -11px;
+        z-index: -5;
+      }
+      .letter{
+        width: 5px;
+        height: 26px;
+        font-size: 8px;
+        font-weight: 500;
+        color: #333333;
+        position: absolute;
+      }
+      .l1{
+        top: 48px;
+        left: 350px;
+      }
+      .l2{
+        top: 73px;
+        left: 352px;
+      }
+      .l3{
+        top: 32px;
+        left: 399px;
+      }
+      .rules .act_rules{
+        width: 141px;
+        height: 90px;
+        position: absolute;
+        top: 4.5px;
+        left: 429px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+      }
+      .rules .act_rules span:nth-child(even){
+        font-weight: 700;
+        color: #223354;
+      }
+      .icon_sets{
+        width: 1009px;
+        height: 166px;
+        position: absolute;
+        top: 359px;
+        left: 48px;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38.73px;
+      }
+      .icon_sets .filled_sets{
+        width: 696px;
+        height: 60px;
+        position: absolute;
+        top: 106px;
+        left: 313px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23.33px;
+        vertical-align: bottom;
+      }
+      .icon_sets .filled_sets .filled_icons{
+        width: 696px;
+        height: 28px;
+        padding: 0px 2px;
+        display: flex;
+        justify-content: space-between;
+        color: #223354;
+        font-size: 24px;
+        position: absolute;
+        top: 32px;
+        left: 0;
+      }
+      .icon_sets .outline_sets{
+        width: 696px;
+        height: 60px;
+        position: absolute;
+        top: 14px;
+        left: 309px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 23.33px;
+        vertical-align: bottom;
+      }
+      .outicons{
+        width: max-content;
+        height: max-content;
+      }
+      .icon_sets .outline_sets .outline_icons{
+        width: 696px;
+        height: 28px;
+        padding: 0px 2px;
+        display: flex;
+        justify-content: space-between;
+        color: #223354;
+        font-size: 24px;
+        position: absolute;
+        top: 32px;
+        left: 0;
+      }
+      .icon_sets .outline_sets .outline_icons .change{
+        color: white;
+        background: #223354;
+        text-align: center;
+        padding: 1px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="iconography">
+      03. <span>Iconography</span>
+    </h1>
+    <div class="rules">
+      <span class="rules_text">Rules</span>
+      <div class="time_image">
+        <i class="far fa-clock"></i>
+      </div>
+      <div class="l1 letter">1</div>
+      <div class="l2 letter">2</div>
+      <div class="l3 letter">3</div>
+      <div class="act_rules">
+        <span>1. Live area</span>
+        <span>20 px</span>
+        <span>2. Save area</span>
+        <span>2 px</span>
+        <span>3. Full size</span>
+        <span>24 px</span>
+      </div>
+    </div>
+    <div class="icon_sets">
+      <span>Icon sets</span>
+      <div class="outline_sets">
+        <span>Outline sets Icons</span>
+        <div class="outline_icons">
+          <i class="far fa-clock outicons"></i>
+          <i class="far fa-file-alt outicons"></i>
+          <i class="fas fa-th-large change outicons"></i>
+          <i class="far fa-calendar outicons"></i> 
+          <i class="fas fa-lock change outicons"></i>
+          <i class="fas fa-shopping-cart change outicons"></i>
+          <i class="far fa-play-circle outicons"></i>  
+          <i class="far fa-eye outicons"></i>
+          <i class="far fa-times-circle outicons"></i> 
+          <i class="fas fa-map-marker-alt change outicons"></i>
+          <i class="far fa-image outicons"></i>  
+          <i class="fas fa-chevron-circle-left change outicons"></i>
+          <i class="far fa-check-circle outicons"></i>
+        </div>
+      </div>
+      <div class="filled_sets">
+        <span>Filled Icons</span>
+        <div class="filled_icons">
+          <i class="fas fa-clock outicons"></i>
+          <i class="fas fa-file-alt outicons"></i>
+          <i class="fas fa-th-large outicons"></i>
+          <i class="fas fa-calendar outicons"></i> 
+          <i class="fas fa-lock outicons"></i>
+          <i class="fas fa-shopping-cart outicons"></i>
+          <i class="fas fa-play-circle outicons"></i>  
+          <i class="fas fa-eye outicons"></i>
+          <i class="fas fa-times-circle outicons"></i> 
+          <i class="fas fa-map-marker-alt outicons"></i>
+          <i class="fas fa-image outicons"></i>  
+          <i class="fas fa-chevron-circle-left  outicons"></i>
+          <i class="fas fa-check-circle outicons"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textfields</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter';
+    }
+    body{
+      width: 1195px;
+      height: 1134px;
+      font-family: Inter;
+    }
+    .textflds{
+      width: 367px;
+      height: 62px;
+      position: absolute;
+      top: 28px;
+      left: 48px;
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 61.6px;
+      color: #828282;
+    }
+    .textflds span{
+      font-weight: 500;
+      color: #223354;
+    }
+    .Rule1{
+      width: 320px;
+      height: 155px;
+      position: absolute;
+      top: 174px;
+      left: 48px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+      color: #bdbdbd;
+    }
+    .Rule1 Label{
+      width: 87px;
+      height: 23px;
+      position: absolute;
+      top: 39px;
+      left: 0;
+      color: black;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .Rule1 #Rule1_input{
+      width: 320px;
+      height: 55px;
+      border-radius: 4px;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      border: 1px solid #bdbdbd;
+    }
+    #Rule1_input::placeholder{
+      width: 158px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .Rule1 span{
+      width: 42px;
+      height: 22px;
+      position: absolute;
+      top: 133px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+    }
+    .Rule2{
+      width: 392px;
+      height: 142px;
+      position: absolute;
+      top: 174px;
+      left: 416px;
+      background: #edf0f5;
+    }
+    .Rule2 i{
+      width: 22.37px;
+      height: 20px;
+      position: absolute;
+      top: 24px;
+      left: 22.24px;
+      color: black;
+      font-size: 22.37px;
+    }
+    .import_rules{
+      width: 302px;
+      height: 118px;
+      position: absolute;
+      top: 24px;
+      left: 66px;
+      background: #edf0f5;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+      font-weight: bold;
+    }
+    .import_rules .container{
+      width: 302px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      font-weight: bold;
+      color: #4f4f4f;
+      display: grid;
+      grid-template-areas: 's e';
+    }
+    .import_rules .container span{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+    }
+    .import_rules .container:nth-child(odd){
+      grid-area: s;
+    }
+    .import_rules .container:nth-child(even){
+      grid-area: e;
+    }
+    .import_rules .container span:nth-child(even){
+      text-align: end;
+    }
+    .Input_Form{
+      width: 320px;
+      height: 94px;
+      position: absolute;
+      top: 377px;
+      left: 48px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #bfbdbd;
+    }
+    .Input_Form #Input_form_input{
+      width: 320px;
+      height: 55px;
+      position: relative;
+      top: 20px;
+      left: 1px;
+      border: 1px solid  #bdbdbd;
+      border-radius: 4px;
+    }
+    #Input_form_input::placeholder{
+      width: 272px;
+      height: 23px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      color: #4f4f4f;
+    }
+    .IF_sts_no_lbl{
+      width: 320px;
+      height: 122px;
+      position: absolute;
+      top: 377px;
+      left: 416px;
+      color: #bdbdbd;
+    }
+    .IF_sts_no_lbl .input_Status_container{
+      width: 320px;
+      height: 83px;
+      position: absolute;
+      top: 39px;
+      left: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .IF_sts_no_lbl .input_Status_container input{
+      width: 320px;
+      height: 55px;
+      border-radius: 4px;
+      border: 1px solid #bdbdbd;
+    }
+    .IF_sts_no_lbl .input_Status_container input::placeholder{
+      width: 158px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .IF_sts_no_lbl .input_Status_container span{
+      width: 42px;
+      height: 22px;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      color: #bdbdbd;
+    }
+    .Input_state{
+      width: 355px;
+      height: 364px;
+      position: absolute;
+      top: 354px;
+      left: 787px;
+      border: 1px dashed #b8b8b8;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22.4px;
+      color: #bdbdbd;
+      padding: 23px 0px 0px 17px;
+    }
+    .in_success{
+      width: 320px;
+      height: 83px;
+      position: absolute;
+      top: 62px;
+      left: 17px;
+    }
+    #input_state_success{
+      width: 320px;
+      height: 55px;
+      border: 1px solid #27ae60;
+      border-radius: 4px;
+    }
+    #input_state_success::placeholder{
+      width: 158px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .in_success span{
+      width: 66px;
+      height: 20px;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      color: #27ae60;
+    }
+    .in_warn{
+      width: 320px;
+      height: 79px;
+      position: absolute;
+      top: 168px;
+      left: 17px;
+    }
+    #input_state_warn{
+      width: 320px;
+      height: 55px;
+      border: 1px solid #e2b93b;
+      border-radius: 4px;
+    }
+    #input_state_warn::placeholder{
+      width: 158px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .in_warn span{
+      width: 66px;
+      height: 20px;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      color: #e2b93b;
+    }
+    .in_error{
+      width: 320px;
+      height: 79px;
+      position: absolute;
+      top: 263px;
+      left: 17px;
+    }
+    #input_state_error{
+      width: 320px;
+      height: 55px;
+      border: 1px solid #eb5757;
+      border-radius: 4px;
+    }
+    #input_state_error::placeholder{
+      width: 158px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .in_error span{
+      width: 66px;
+      height: 20px;
+      position: absolute;
+      top: 63px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      color: #eb5757;
+    }
+    .Input_label{
+      width: 320px;
+      height: 125px;
+      position: absolute;
+      top: 547px;
+      left: 48px;
+      color: #bdbdbd;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+    }
+    .in_label_container{
+      width: 320px;
+      height: 86px;
+      position: absolute;
+      top: 39px;
+      left: 0;
+    }
+    .in_label_container label{
+      width: 105px;
+      height: 23px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .in_label_container #input_label_input{
+      width: 320px;
+      height: 55px;
+      position: absolute;
+      top: 31px;
+      left: 0;
+      border: 1px solid #bdbdbd;
+      border-radius: 4px;
+    }
+    #input_label_input::placeholder{
+      width: 276px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .IF_lbl_and_sts{
+      width: 320px;
+      height: 154px;
+      position: absolute;
+      top: 547px;
+      left: 416px;
+      color: #bdbdbd;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+     }
+    .IF_lbl_and_sts_container{
+      width: 320px;
+      height: 114px;
+      position: absolute;
+      top: 39px;
+      left: 0;
+    }
+    .IF_lbl_and_sts_container label{
+      width: 87px;
+      height: 23px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .IF_lbl_and_sts_container #If_label_input{
+      width: 320px;
+      height: 54px;
+      position: absolute;
+      top: 31px;
+      left: 0;
+      border: 1px solid #bdbdbd;
+      border-radius: 4px;
+    }
+    .IF_lbl_and_sts_container #If_label_input::placeholder{
+      width: 276px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .IF_lbl_and_sts_container span{
+      width: 92px;
+      height: 20px;
+      position: absolute;
+      top: 94px;
+      left: 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.6px;
+      color: #bdbdbd;
+    }
+    .Input_icon_lbl_sts{
+      width: 320px;
+      height: 154px;
+      position: absolute;
+      top: 748px;
+      left: 48px;
+      color: #bdbdbd;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+      color: #bdbdbd;
+    }
+    .input_lbl_icon_container{
+      width: 320px;
+      height: 115px;
+      position: absolute;
+      top: 39px;
+      left: 0;
+    }
+    .input_lbl_icon_container label{
+      width: 105px;
+      height: 23px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    #icon_label_input{
+      width: 320px;
+      height: 56px;
+      position: absolute;
+      top: 31px;
+      left: 0;
+      border: 1px solid #bdbdbd;
+      border-radius: 4px;
+    }
+    #icon_label_input::placeholder{
+      width: 272px;
+      height: 24px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    .input_lbl_icon_container .icon{
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 47px;
+      left: 294px;
+      background: #c4c4c4;
+    }
+    .input_lbl_icon_container span{
+      width: 43px;
+      height: 20px;
+      position: absolute;
+      top: 94px;
+      left: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.6px;
+      color: #bdbdbd;
+    }
+    .Text_Area{
+      width: 320px;
+      height: 338px;
+      position: absolute;
+      top: 748px;
+      left: 416px;
+      color: #bdbdbd;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22.4px;
+    }
+    .text_area_container{
+      width: 320px;
+      height: 297.31px;
+      position: absolute;
+      top: 40.69px;
+      left: 0;
+    }
+    .text_area_container label{
+      width: 105px;
+      height: 23px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    #text_area_input{
+      width: 320px;
+      height: 268px;
+      position: absolute;
+      top: 29.31px;
+      left: 0;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+    }
+    #text_area_input::placeholder{
+      width: 123px;
+      height: 23px;
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22.4px;
+      color: #4f4f4f;
+    }
+    </style>
+  </head>
+  <body>
+    <h1 class="textflds">04. <span>Textfields</span></h1>  
+    <div class="Rule1">
+      Label ,Status & Placeholder
+      <label for="Label">Label</label> 
+      <input type="text" name="Rule1_input" id="Rule1_input" value="" placeholder="Placeholder"/>
+      <span>Status</span>
+    </div>
+    <div class="Rule2">
+      <i class="fas fa-exclamation-circle"></i> 
+      <div class="import_rules">
+        Input Rules: 
+        <span class="container">
+          <span>Padding Left</span> 
+          <span>-> 2 x font size</span>
+          <span>Padding Top-Bottom</span> 
+          <span>-> 1 x font size</span>
+          <span>Padding Right(icon)</span>
+          <span>-> 2 x font size</span>
+        </span>
+      </div>
+    </div>
+    <div class="Input_Form">
+      Input Form ( No label & Status)
+      <input type="text" name="Rule2_input" id="Input_form_input" value="" placeholder="Placeholder"/>
+    </div>
+    <div class="IF_sts_no_lbl">
+      Input Form + Status (No Label)
+      <div class="input_Status_container">
+      <input type="text" name="Ibfs_no_lbl_input" id="Ibfs_no_lbl_input" value="" placeholder="Input Text"/>
+      <span>Status</span> 
+      </div>
+    </div>
+    <div class="Input_state">
+      Input State
+      <div class="in_success">
+      <input type="text" name="input_state_success" id="input_state_success" value="" placeholder="Input Text" />
+      <span class="success">Success !</span>
+      </div>
+      <div class="in_warn">
+      <input type="text" name="input_state_warn" id="input_state_warn" value=""  placeholder="Input Text"/>
+      <span class="warn">Warn !</span>
+      </div>
+      <div class="in_error">
+      <input type="text" name="input_state_error" id="input_state_error" value=""  placeholder="Input Text"/>
+      <span class="error">error !</span>
+      </div>
+    </div>
+    <div class="Input_label">
+      Input Form + Label 
+      <div class="in_label_container">
+      <label for="Label Sample">Label Sample</label>
+      <input type="text" name="input_label_input" id="input_label_input" value="" placeholder="Input text"/>
+      </div>
+      </div>
+    <div class="IF_lbl_and_sts">
+      Input Form + Label & Status
+      <div class="IF_lbl_and_sts_container">
+      <label for="Label Sample">Label Sample</label>
+      <input type="text" name="If_label_input" id="If_label_input" value="" placeholder="Input Text Here"/>
+      <span>Empty</span> 
+      </div>
+    </div>
+    <div class="Input_icon_lbl_sts">
+      Input icon + Label & Status
+      <div class="input_lbl_icon_container">
+      <label for="Label Sample">Label Sample</label>
+      <input type="text" name="icon_label_input" id="icon_label_input" value="" placeholder="Input Text icon"/>
+      <div class="icon"></div>
+      <span>Status</span> 
+      </div>
+    </div>
+    <div class="Text_Area">
+      Text Area
+      <div class="text_area_container">
+        <label for="Label">Label Sample</label>
+      <input type="text" name="text_area_input" id="text_area_input" value="" placeholder="Enter Text Here"/>
+      </div>
+    </div>
+  </body>
+</html>
