@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. Buttons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css" media="all">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter';
+    }
+
+    body {
+        width: 1152px;
+        height: 1245px;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #bdbdbd;
+    }
+
+    .buttons {
+        width: 311px;
+        height: 62px;
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 61.6px;
+        color: #828282;
+    }
+
+    .buttons span {
+        font-weight: 600;
+        color: #223354;
+    }
+
+    .Rule1 {
+        width: 371px;
+        height: 113px;
+        position: absolute;
+        top: 174px;
+        left: 48px;
+        background: #edf0f5;
+    }
+
+    .Rule1 i {
+        width: 22.37px;
+        height: 20px;
+        position: absolute;
+        top: 24px;
+        left: 22.24px;
+        color: black;
+        font-size: 22.37px;
+    }
+
+    .Rule2 {
+        width: 458px;
+        height: 113px;
+        position: absolute;
+        top: 174px;
+        left: 435px;
+        background: #edf0f5;
+    }
+
+    .Rule2 i {
+        width: 22.37px;
+        height: 20px;
+        position: absolute;
+        top: 24px;
+        left: 22.24px;
+        color: black;
+        font-size: 22.37px;
+    }
+
+    .import_rules {
+        width: 302px;
+        height: 89px;
+        position: absolute;
+        top: 24px;
+        left: 66px;
+        background: #edf0f5;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        font-weight: bold;
+    }
+
+    .Rule2 .import_rules {
+        width: 370px;
+        height: 68px;
+    }
+
+    .import_rules .container {
+        width: 302px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        font-weight: bold;
+        color: #4f4f4f;
+        display: grid;
+        grid-template-areas: 's e';
+    }
+
+    .Rule2 .import_rules .container {
+        width: 370px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        font-weight: bold;
+        color: #4f4f4f;
+        display: grid;
+        grid-template-areas: 's e';
+    }
+
+    .import_rules .container span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+    }
+
+    .import_rules .container:nth-child(odd) {
+        grid-area: s;
+    }
+
+    .import_rules .container:nth-child(even) {
+        grid-area: e;
+    }
+
+    .import_rules .container span:nth-child(even) {
+        text-align: start;
+    }
+
+    .color {
+        width: 278px;
+        height: 213px;
+        position: absolute;
+        top: 327px;
+        left: 48px;
+    }
+
+    .primary {
+        width: 276px;
+        height: 80px;
+        position: absolute;
+        top: 39px;
+        left: 0.5px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #4f4f4f;
+    }
+
+    .primary_button {
+        width: 275px;
+        height: 55px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 25px;
+        border-radius: 8px;
+        padding: 16px 80px;
+        background: #223354;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .second {
+        width: 276px;
+        height: 81px;
+        position: absolute;
+        top: 139px;
+        border-radius: 8px;
+        color: #4f4f4f;
+    }
+
+    .second_button {
+        width: 275px;
+        height: 55px;
+        box-sizing: border-box;
+        padding: 16px 80px;
+        position: absolute;
+        top: 26px;
+        border-radius: 8px;
+        background: #1ab4d7;
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    .size {
+        width: 344px;
+        height: 448px;
+        position: absolute;
+        top: 327px;
+        left: 395px;
+    }
+
+    .small {
+        width: 241px;
+        height: 71px;
+        position: absolute;
+        top: 48px;
+        border-radius: 8px;
+        color: #4F4F4F;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+    }
+
+    .small_button {
+        width: 241px;
+        height: 48px;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 16px 0 0 0;
+        border-radius: 8px;
+        background: #223354;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .normal {
+        width: 276px;
+        height: 79.6px;
+        border-radius: 8px;
+        color: #4f4f4f;
+        position: absolute;
+        top: 140.4px;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        text-align: left;
+    }
+
+    .normal_button {
+        width: 275px;
+        height: 55px;
+        box-sizing: border-box;
+        padding: 16px 0 0 80px;
+        border-radius: 8px;
+        background: #223354;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+
+    .medium {
+        width: 310px;
+        height: 85px;
+        position: absolute;
+        top: 247px;
+        gap: 0px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #4F4F4F;
+
+    }
+
+    .medium_button {
+        width: 310px;
+        height: 62px;
+        box-sizing: border-box;
+        padding: 18px 90px 18px 90px;
+        border-radius: 8px;
+        background: #223354;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25.2px;
+        color: white;
+    }
+
+    .large {
+        width: 344px;
+        height: 91px;
+        position: absolute;
+        top: 358.8px;
+        border-radius: 8px;
+        color: #4f4f4f;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+    }
+
+    .large_button {
+        width: 344px;
+        height: 68px;
+        box-sizing: border-box;
+        padding: 20px 100px;
+        border-radius: 8px;
+        background: #223354;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    .full_width {
+        width: 321px;
+        height: 443px;
+        position: absolute;
+        top: 327px;
+        left: 783px;
+    }
+
+    .default {
+        width: 276px;
+        height: 81px;
+        border-radius: 8px;
+        color: #4f4f4f;
+        position: absolute;
+        top: 40px;
+    }
+
+    .default_button {
+        width: 321px;
+        height: 55px;
+        box-sizing: border-box;
+        padding: 16px 103px;
+        border-radius: 8px;
+        background: #223354;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16103;
+    }
+
+    .hover {
+        width: 321px;
+        height: 78px;
+        position: absolute;
+        top: 142px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #4f4f4f;
+    }
+
+    .hover_button {
+        wwidth: 321px;
+        height: 55px;
+        box-sizing: border-box;
+        padding: 16px 103px;
+        border-radius: 8px;
+        color: #ffffff;
+        font-weight: 700;
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        background-blend-mode: multiply;
+        font-size: 16px;
+
+
+    }
+
+    .active {
+        width: 321px;
+        height: 78px;
+        position: absolute;
+        top: 248px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #4f4f4f;
+
+    }
+
+    .active_button {
+        width: 321px;
+        height: 55px;
+        border-radius: 8px;
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+        background-blend-mode: screen;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        padding: 16px 103px;
+        box-sizing: border-box;
+        color: white;
+    }
+
+    .disable {
+        width: 321px;
+        height: 79px;
+        position: absolute;
+        top: 363px;
+        border-radius: 8px 0px 0px 0px;
+        opacity: 0px;
+        color: #4f4f4f;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+    }
+
+    .disable_button {
+        width: 321px;
+        height: 55px;
+        border-radius: 8px;
+        background: #E0E0E0;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 16px 103px;
+        box-sizing: border-box;
+
+    }
+
+    .variants {
+        width: 1056px;
+        height: 374px;
+        position: absolute;
+        top: 823px;
+        left: 48px;
+    }
+
+    .variants_table table {
+        width: 1056px;
+        height: 344px;
+        position: absolute;
+        top: 30px;
+        border-collapse: seperate;
+        border-spacing: 10px;
+    }
+
+    .col1 {
+        width: 64px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333333;
+
+    }
+
+    .col2 {
+        width: 275.5px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333333;
+    }
+
+    .col3 {
+        width: 275px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333333;
+
+    }
+
+    .col4 {
+        width: 283px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333333;
+
+    }
+
+    .col5 {
+        width: 66px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #333333;
+
+    }
+
+    .icon {
+        width: 56px;
+        height: 56px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background: #223354;
+        font-size: 44px;
+        padding: 12px 12px;
+        color: white;
+        text-align: center;
+    }
+
+    .variants_table tbody tr td:nth-child(1) {
+        width: 63px;
+        height: 23px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #333333;
+    }
+
+    .variants_table tbody tr td:nth-child(2) div {
+        width: 275px;
+        height: 55px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        box-sizing: border-box;
+        padding: 16px 0 0 80px;
+        color: white;
+
+    }
+
+    .variants_table tbody tr td:nth-child(3) div {
+        width: 275px;
+        height: 55px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        box-sizing: border-box;
+        padding: 16px 0 0 80px;
+        color: #333333;
+
+    }
+
+    .variants_table tbody tr td:nth-child(4) div {
+        width: 283px;
+        height: 56px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        box-sizing: border-box;
+        padding: 16px 0 0 88px;
+        color: white;
+
+    }
+
+    .variants_table tbody tr td:nth-child(4) div span {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: -16px;
+        color: white;
+
+    }
+
+    .normal_default {
+        background: #223354;
+
+    }
+
+    .normal_hover {
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        background-blend-mode: multiply;
+
+    }
+
+    .normal_active {
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+        background-blend-mode: screen;
+
+    }
+
+    .normal_disable {
+        background: #E0E0E0;
+
+    }
+
+    .Outline_default {
+        border: 2px solid #223354
+    }
+
+    .Outline_hover {
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+        border: 2px solid;
+        border-image-source: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        background-blend-mode: screen;
+
+
+    }
+
+    .Outline_active {
+        background: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
+        border: 2px solid;
+
+        border-image-source: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+        background-blend-mode: screen;
+
+
+
+    }
+
+    .Outline_disable {
+        border: 1px solid #BDBDBD;
+        color: #e0e0e0;
+        ;
+    }
+
+    .icon_text_default {
+        background: #223354;
+
+    }
+
+    .icon_text_hover {
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        background-blend-mode: multiply;
+
+    }
+
+    .icon_text_active {
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+        background-blend-mode: screen;
+
+    }
+
+    .icon_text_disable {
+        background: #E0E0E0;
+
+    }
+
+    .icon_default {
+        background: #223354;
+
+    }
+
+    .icon_hover {
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        background-blend-mode: multiply;
+
+    }
+
+    .icon_active {
+        background-image: linear-gradient(0deg, #223354, #223354),
+            linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+        background-blend-mode: screen;
+
+    }
+
+    .icon_disable {
+        background: #E0E0E0;
+        color: #bdbdbd;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="buttons">06. <span>Buttons</span></h1>
+    <div class="Rule1">
+        <i class="fas fa-exclamation-circle"></i>
+        <div class="import_rules">
+            Button Rules:
+            <span class="container">
+                <span>Padding Left Right</span>
+                <span>-> 5 x font size</span>
+                <span>Padding Top Bottom</span>
+                <span>-> 1 x font size</span>
+            </span>
+        </div>
+    </div>
+    <div class="Rule2">
+        <i class="fas fa-exclamation-circle"></i>
+        <div class="import_rules">
+            Full-width Button :
+            <span class="container">
+                <span>Left Right</span>
+                <span>-> determined by the device width</span>
+                <span>Top-Bottom</span>
+                <span>-> 1 x font size</span>
+            </span>
+        </div>
+    </div>
+    <div class="color">
+        Colors
+        <div class="primary">
+            Primary
+            <div class="primary_button">
+                Button Sample
+            </div>
+        </div>
+        <div class="second">
+            Second
+            <div class="second_button">
+                Button Sample
+            </div>
+        </div>
+    </div>
+    <div class="size">
+        Size
+        <div class="small">
+            Small
+            <div class="small_button">
+                Button Sample</div>
+        </div>
+        <div class="normal">
+            Normal
+            <div class="normal_button">
+                Button Sample</div>
+        </div>
+        <div class="medium">
+            Medium
+            <div class="medium_button">
+                Button Sample</div>
+        </div>
+        <div class="large">
+            Large
+            <div class="large_button">
+                Button Sample</div>
+        </div>
+    </div>
+    <div class="full_width">
+        Full Width
+        <div class="default">
+            Default
+            <div class="default_button">
+                Button Sample
+            </div>
+        </div>
+        <div class="hover">
+            Hover
+            <div class="hover_button">
+                Button Sample
+            </div>
+        </div>
+        <div class="active">
+            Active
+            <div class="active_button">
+                Button Sample
+            </div>
+        </div>
+        <div class="disable">
+            Disable
+            <div class="disable_button">
+                Button Sample
+            </div>
+        </div>
+    </div>
+    <div class="variants">
+        Variants
+        <div class="variants_table">
+            <table>
+                <thead>
+                    <tr class="row1">
+                        <td class="col1"></td>
+                        <td class="col2">Normal</td>
+                        <td class="col3">Outline</td>
+                        <td class="col4">Icon text</td>
+                        <td class="col5">Icon</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Default</td>
+                        <td>
+                            <div class="normal_default default_box variant_boxes">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Outline_default default_box variant_boxes">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_text_default default_box variant_boxes">
+                                <span>+</span> Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_default icon">
+                                +
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hover</td>
+                        <td>
+                            <div class="normal_hover hover_box variant_boxes">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Outline_hover hover_box variant_boxes">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_text_hover hover_box variant_boxes">
+                                <span>+</span> Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_hover icon">
+                                +
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Active</td>
+                        <td>
+                            <div class="normal_active active_box variant_boxes">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Outline_active active_box variant_boxes">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_text_active active_box variant_boxes">
+                                <span>+</span> Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_active icon">
+                                +
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Disable</td>
+                        <td>
+                            <div class="normal_disable disable_box variant_boxes">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Outline_disable disable_box variant_boxes" style="color: #e0e0e0;">
+                                Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_text_disable disable_box variant_boxes">
+                                <span>+</span> Button Sample
+                            </div>
+                        </td>
+                        <td>
+                            <div class="icon_disable icon">
+                                +
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
