@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Elements</title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    body {
+        width: 1152;
+        height: 2086;
+        font-family: Inter;
+
+    }
+
+    .heading {
+        width: 450px;
+        height: 62px;
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 56px;
+        color: #223354;
+    }
+
+    .heading span {
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 56px;
+    }
+
+    .images {
+        width: 1056px;
+        height: 445px;
+        position: absolute;
+        top: 174px;
+        left: 48px;
+        color: #bdbdbd;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+
+    }
+
+    .tittleGallery {
+        width: 140;
+        height: 27;
+        position: absolute;
+        top: 47px;
+        left: 0;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 24px;
+        color: #223354;
+    }
+
+    .subTittle {
+        width: 478px;
+        height: 54px;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        color: #4f4f4f;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+
+    }
+
+    .imageList {
+        width: 1056px;
+        height: 277px;
+        position: absolute;
+        top: 168px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .imageListElt {
+        width: 246px;
+        height: 277px;
+        border-radius: 8px;
+    }
+
+    .imageListElt img {
+        width: 246px;
+        height: 246px;
+        border-radius: 8px;
+
+    }
+
+    .imageListElt span {
+        width: 88px;
+        height: 23px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        color: black;
+    }
+
+    .images_4 div {
+        width: 246px;
+        height: 246px;
+        box-sizing: border-box;
+        padding: 111px 69px;
+        border-radius: 8px;
+        background: #C4C4C4;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 20px;
+        color: #828282;
+    }
+
+    .tables {
+        width: 1040.35595703125px;
+        height: 478px;
+        position: absolute;
+        top: 667px;
+        left: 48px;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        color: #bdbdbd;
+    }
+
+    .tableName {
+        width: 142;
+        height: 27;
+        position: absolute;
+        top: 47px;
+        left: 0;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 24px;
+        color: #223354;
+    }
+
+    .actTable {
+        width: 1040px;
+        height: 316px;
+        position: absolute;
+        top: 90px;
+        left: 0;
+    }
+
+    table {
+        border: none;
+        border-collapse: collapse;
+    }
+
+    table thead {
+        width: 1040px;
+        height: 64px;
+        border-radius: 4px;
+        background: #223354;
+        color: white;
+
+    }
+
+    .c1 {
+        width: 22px;
+        height: 24px;
+        padding: 20px 34px 20px 34px;
+    }
+
+    .c2,
+    .c3,
+    .c4,
+    .c5 {
+        width: 142px;
+        height: 24px;
+        padding: 20px 34px 20px 34px;
+        border-spacing: 10px;
+    }
+
+    .c6 {
+        width: 110px;
+        height: 24px;
+    }
+
+    tbody tr {
+        width: 1040px;
+        height: 63px;
+    }
+
+    .row_2,
+    .row_4 {
+        background: #e0e0e0;
+    }
+
+    tbody tr td:not(.box) {
+        padding: 20px 34px 20px 34px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        color: #4f4f4f;
+    }
+
+    .box {
+        width: 88px;
+        height: 49px;
+        position: absolute;
+        margin: 6px 0 0 0;
+        box-sizing: border-box;
+        padding: 13px 27px 13px 27px;
+        border-radius: 8px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        background: #1ab4d7;
+        color: white;
+    }
+
+    .pagination {
+        width: 160px;
+        height: 48px;
+        position: absolute;
+        top: 430px;
+        left: 880.36px;
+    }
+
+    .pagination div {
+        width: 48px;
+        height: 48px;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 14px 20px 14px 20px;
+        border-radius: 4px;
+        border: 1px solid #828282;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+
+    }
+
+    .page1 {
+        background: #223354;
+    }
+
+    .modals {
+        width: 388px;
+        height: 385px;
+        position: absolute;
+        top: 1185px;
+        left: 48px;
+        border-radius: 8px;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        color: #bdbdbd;
+    }
+
+    .modalContainer {
+        width: 388px;
+        height: 346px;
+        position: absolute;
+        top: 39px;
+        left: 0;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0px 8px 40px 0px #092C4C29;
+
+    }
+
+    .modalImage {
+        width: 96px;
+        height: 96px;
+        border-radius: 8px;
+        background: #E0E0E0;
+
+    }
+
+    .modalMessage {
+        width: 240px;
+        height: 83px;
+        text-align: center;
+    }
+
+    .modalMessage span {
+        display: block;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 24px;
+        color: #333333;
+    }
+
+    .modalMessage p {
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        color: #333333;
+    }
+
+    .modalButt {
+        width: 275px;
+        height: 55px;
+        box-sizing: border-box;
+        padding: 16px 80px;
+        border-radius: 8px;
+        background: #223354;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+    }
+
+    .banner {
+        width: 582px;
+        height: 271px;
+        position: absolute;
+        top: 1185px;
+        left: 522px;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        color: #bdbdbd;
+    }
+
+    .bannerFlat {
+        width: 582px;
+        height: 232px;
+        position: absolute;
+        top: 49px;
+        left: 0;
+        border-radius: 8px;
+        background: #223354;
+        overflow: hidden;
+    }
+
+    .bannerFlat img {
+        width: 141px;
+        height: 210px;
+        position: absolute;
+        top: 22px;
+        left: 417px;
+
+    }
+
+    .btittle {
+        width: 377px;
+        height: 168px;
+        position: absolute;
+        top: 32px;
+        left: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .bantittle {
+        width: 208px;
+        height: 36px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+    .lorem {
+        width: 374px;
+        height: 45px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+
+    }
+
+    .butt {
+        width: 163px;
+        height: 55px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        background: #1AB4D7;
+
+    }
+
+    .accordians {
+        width: 1056px;
+        height: 414px;
+        position: absolute;
+        top: 1623px;
+        left: 48px;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        color: #bdbdbd;
+    }
+
+    .closed {
+        width: 493px;
+        height: 163px;
+        position: absolute;
+        top: 46px;
+        left: 0;
+
+    }
+
+    .closed div {
+        width: 493px;
+        height: 55px;
+        border: 1px solid #bdbdbd;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        color: #223354;
+    }
+
+    .clAcc_1 {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom: none;
+    }
+
+    .clAcc_3 {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .group65 {
+        width: 493px;
+        height: 181px;
+        position: absolute;
+        top: 232px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    .group65 div {
+        width: 493px;
+        height: 55px;
+        border: 1px solid #bdbdbd;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        color: #223354;
+        box-shadow: 0px 2px 16px 0px #0000001A;
+    }
+
+    .open {
+        width: 534px;
+        height: 368px;
+        position: absolute;
+        top: 46px;
+        left: 522px;
+
+    }
+
+    .accCollapse_1 {
+        width: 534px;
+        height: 260px;
+    }
+
+    .accCollapse_1 span {
+        display: inline-block;
+        width: 534px;
+        height: 55px;
+        box-sizing: border-box;
+        padding: 14px 0 0 24px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background: #223354;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        color: white;
+    }
+
+    .accCollapse_1 p {
+        box-sizing: border-box;
+        width: 534px;
+        height: 205px;
+        margin: 0px;
+        padding: 24px;
+        background: #E0E0E0;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        color: #4f4f4f;
+
+    }
+
+    .accCollapse_2,
+    .accCollapse_3 {
+        width: 534;
+        height: 55;
+        border: 1px solid #bdbdbd;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        color: #223354;
+    }
+
+    .accCollapse_3 {
+        border-bottom-left-radius: 8px;
+
+        border-bottom-right-radius: 8px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="heading">06.<span>Big Elements</span></div>
+    <div class="images">
+        Images
+        <div class="tittleGallery">Tittle gallery</div>
+        <div class="subTittle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+        <div class="imageList">
+            <div class="images_1 imageListElt">
+                <img src="https://i.postimg.cc/L8vw4vjB/Rectangle-41.jpg" alt="">
+                <span>Image title</span>
+            </div>
+            <div class="images_2 imageListElt">
+                <img src="https://i.postimg.cc/X7jgNWLm/Rectangle-42.jpg" alt="">
+                <span>Image title</span>
+            </div>
+            <div class="images_3 imageListElt">
+                <img src="https://i.postimg.cc/zXxFVQPB/Rectangle-43.jpg" alt="">
+                <span>Image title</span>
+            </div>
+            <div class="images_4 imageListElt">
+                <div>No Image</div>
+                <span>Image title</span>
+            </div>
+        </div>
+    </div>
+    <div class="tables">
+        Tables
+        <div class="tableName">Table Name</div>
+        <div class="actTable">
+            <table>
+                <thead>
+                    <td class="c1">No</td>
+                    <td class="c2">Column Name</td>
+                    <td class="c3">Column Name</td>
+                    <td class="c4">Column Name</td>
+                    <td class="c5">Column Name</td>
+                    <td class="c6"></td>
+                </thead>
+                <tbody>
+                    <tr class="row_1">
+                        <td>1</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td class="box">Add</td>
+                    </tr>
+                    <tr class="row_2">
+                        <td>1</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td class="box">Add</td>
+                    </tr>
+                    <tr class="row_3">
+                        <td>1</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td class="box">Add</td>
+                    </tr>
+                    <tr class="row_4">
+                        <td>1</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td>Content</td>
+                        <td class="box">Add</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <div class="page1 pel">1</div>
+            <div class="page2 pel">2</div>
+            <div class="page3 pel">3</div>
+        </div>
+    </div>
+    <div class="modals">
+        <div class="modalContainer">
+            <div class="modalImage"></div>
+            <div class="modalMessage">
+                <span>Modal Message</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit lore</p>
+            </div>
+            <div class="modalButt"><label>Button Sample</label></div>
+        </div>
+    </div>
+    <div class="banner">
+        Banners
+        <div class="bannerFlat">
+            <img src="https://i.postimg.cc/TYv4Vhxs/Image.png" alt="">
+            <div class="btittle">
+                <div class="bantittle">Banner Titles</div>
+                <div class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </div>
+                <div class="butt">Button Sample</div>
+            </div>
+        </div>
+    </div>
+    <div class="accordians">
+        Accordion
+        <div class="closed">
+            <div class="clAcc_1">Collapse Group 1</div>
+            <div class="clAcc_2">Collapse Group 2</div>
+            <div class="clAcc_3">Collapse Group 3</div>
+        </div>
+        <div class="group65">
+            <div class="groupAcc_1">Collapse Group 1</div>
+            <div class="groupAcc_2">Collapse Group 2</div>
+            <div class="groupAcc_3">Collapse Group 3</div>
+        </div>
+        <div class="open">
+            <div class="accCollapse_1">
+                <span>Collapse Group1</span>
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content. make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. make up the bulk of the card's content.Some quick example text to build on</p>
+            </div>
+            <div class="accCollapse_2">Collapse Group 2</div>
+            <div class="accCollapse_3">Collapse Group 3</div>
+        </div>
+    </div>
+</body>
+
+</html>
