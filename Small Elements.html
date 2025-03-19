@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Small Elements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css" integrity="sha512-ajhUYg8JAATDFejqbeN7KbF2zyPbbqz04dgOLyGcYEk/MJD3V+HJhJLKvJ2VVlqrr4PwHeGTTWxbI+8teA7snw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    body {
+        width: 1152px;
+        height: 1681px;
+        background: #FFFFFF;
+        font-family: Inter;
+    }
+
+    .heading {
+        width: 502px;
+        height: 62px;
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        font-family: Inter;
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 61.6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #223354;
+    }
+
+    .heading span {
+        font-family: Inter;
+        font-size: 56px;
+        font-weight: 600;
+        line-height: 61.6px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+    }
+
+    .file_upload {
+        width: 386px;
+        height: 1356px;
+        position: absolute;
+        top: 174px;
+        left: 48px;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #bdbdbd;
+    }
+
+    .small_form_upload {
+        width: 386px;
+        height: 214px;
+        position: absolute;
+        top: 47px;
+    }
+
+    .small_file_upload {
+        width: 386px;
+        height: 55px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .file-input {
+        display: none;
+    }
+
+    .file-label {
+        display: inline-block;
+        width: 108px;
+        height: 47px;
+        position: absolute;
+        top: 4px;
+        left: 274px;
+        box-sizing: border-box;
+        background-color: #223354;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 14px 0px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.6px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: white;
+    }
+
+    .file-name {
+        display: inline-block;
+        width: 272px;
+        height: 23px;
+        margin: 16px 0px 0px 24px;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        cursor: default;
+    }
+
+    .small_progress_upload {
+        width: 386px;
+        height: 56px;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        border-radius: 4px;
+        border: 1px solid #BDBDBD
+    }
+
+    .finish_upload {
+        width: 386px;
+        height: 56px;
+        position: absolute;
+        top: 158px;
+        left: 0;
+        border: 1px solid #bdbdbd;
+    }
+
+    .small_box {
+        width: 386px;
+        height: 56px;
+    }
+
+    .small_box .sample {
+        width: 250px;
+        height: 56px;
+        color: white;
+        background: #223354;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        font-weight: 700;
+        font-size: 16px;
+
+    }
+.finish_upload .small_box .sample{
+width: 250px;
+        height: 56px;
+        color: #223354;
+        background: #ffffff;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-sizing: border-box;
+        padding: 16px 24px;
+        font-weight: 700;
+        font-size: 16px;
+}
+    .small_box .sympol {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        position: absolute;
+        top: 3px;
+        left: 312px;
+        color: #223354;
+        padding: 7px 7px 5px 7px;
+        box-sizing: border-box;
+    }
+
+    .big_form_upload {
+        width: 386px;
+        height: 1055px;
+        position: absolute;
+        top: 301px;
+    }
+
+    .empty_upload {
+        width: 386px;
+        height: 325px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        border: 1px solid #bdbdbd;
+        color: #223354;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+
+    }
+
+    .hover_upload {
+        width: 386px;
+        height: 325px;
+        position: absolute;
+        top: 365px;
+        left: 0;
+        border: 1px solid #bdbdbd;
+        color: #223354;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+
+    }
+
+    .big_progress_upload {
+        width: 386px;
+        height: 325px;
+        position: absolute;
+        top: 730px;
+        left: 0;
+        border: 1px solid #bdbdbd;
+        color: #223354;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+    }
+
+    .pl1 {
+        width: 272px;
+        height: 23px;
+        position: relative;
+        top: 16px;
+        left: 24px;
+    }
+
+    .big_file_empty_drag_container {
+        width: 338px;
+        height: 175px;
+        position: absolute;
+        top: 55px;
+        left: 24px;
+        box-sizing: border-box;
+    }
+
+    .big_file_empty_input {
+        display: none;
+    }
+
+    .big_empty_upload_button {
+        width: 338px;
+        height: 55px;
+        position: absolute;
+        top: 246px;
+        left: 24px;
+        border-radius: 8px;
+        background: #bdbdbd;
+        box-sizing: border-box;
+        padding: 16px 0 0 121px;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        cursor: pointer;
+    }
+
+    .drg_ctr {
+        width: 113px;
+        height: 63px;
+        margin: 88px 0 0 113px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        left: px;
+        color: #4f4f4f;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drg_ctr .lbl1 {
+        width: 115px;
+        height: 23px;
+        text-align: center;
+    }
+
+    .drg_ctr .lbl2 {
+        width: 16px;
+        height: 20px;
+        text-align: center;
+    }
+
+    .drg_ctr .in_box_lbl {
+        width: 52px;
+        height: 20px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.6px;
+        color: #223354;
+        cursor: pointer;
+    }
+
+    .drg_ctr i {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 24px;
+        left: 149px;
+        font-size: 33.33px;
+    }
+
+
+    .hover_upload .big_empty_upload_button {
+        background: #223354;
+    }
+
+    .half_bar {
+        width: 290px;
+        height: 24px;
+        position: absolute;
+        top: 91px;
+        left: 24px;
+        text-align: center;
+        background: #e0e0e0;
+    }
+
+    .half_bar::after {
+        content: '50%';
+        width: 161px;
+        height: 24px;
+        background: #223354;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: end;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+    }
+
+    .image_sympol {
+        width: 119px;
+        height: 24px;
+        position: relative;
+        top: 59px;
+        left: 24px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22.4px;
+        padding-left: 32px;
+        color: #4F4F4F;
+    }
+
+    .image_sympol i {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .progress_bar {
+        width: 589px;
+        height: 92px;
+        position: absolute;
+        top: 174px;
+        left: 515px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #bdbdbd;
+    }
+
+    .half_progress {
+        width: 589px;
+        height: 53px;
+        position: absolute;
+        top: 39px;
+        left: 0px;
+    }
+
+    .half_bar_progress {
+        width: 589px;
+        height: 24px;
+        text-align: center;
+        background: #e0e0e0;
+    }
+
+    .half_centerd::after {
+        content: '50%';
+        width: 328px;
+        height: 24px;
+        background: #223354;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+    }
+
+    .half_progress span {
+        width: 94px;
+        height: 23px;
+        position: relative;
+        top: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 22.4px;
+    }
+
+    .badges {
+        width: 401px;
+        height: 138px;
+        position: absolute;
+        top: 549px;
+        left: 517px;
+        color: #bdbdbd;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+    }
+
+    .badges_1 {
+        width: 401px;
+        height: 34px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22.4px;
+        position: absolute;
+        top: 46px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .primary {
+        width: 68px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        opacity: 0px;
+        background: #223354;
+        box-sizing: border-box;
+    }
+
+    .secondary {
+        width: 89px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        opacity: 0px;
+        background: #1AB4D7;
+        box-sizing: border-box;
+
+    }
+
+    .success {
+        width: 73px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        opacity: 0px;
+        background: #27AE60;
+        box-sizing: border-box;
+
+    }
+
+    .info {
+        width: 42px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        background: #2F80ED;
+        box-sizing: border-box;
+
+    }
+
+    .danger {
+        width: 65px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        opacity: 0px;
+        background: #EB5757;
+        box-sizing: border-box;
+    }
+
+    .badges_2 {
+        width: 202px;
+        height: 34px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22.4px;
+        position: absolute;
+        top: 104px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .warn {
+        width: 72px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        opacity: 0px;
+        background: #E2B93B;
+        box-sizing: border-box;
+    }
+
+    .light {
+        width: 50px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        opacity: 0px;
+        background: #E0E0E0;
+        box-sizing: border-box;
+    }
+
+    .dark {
+        width: 48px;
+        height: 39px;
+        padding: 8px;
+        gap: 10px;
+        border-radius: 7px;
+        opacity: 0px;
+        background: #333333;
+        box-sizing: border-box;
+    }
+
+    .circle_progress {
+        width: 187px;
+        height: 187px;
+        position: absolute;
+        top: 314px;
+        left: 515px;
+
+    }
+
+    .circle_indicator {
+        width: 187px;
+        height: 187px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-top: 16px solid #223354;
+        border-right: 16px solid #223354;
+        border-bottom: 16px solid #223354;
+        border-left: 16px solid #c4c4c4;
+        transform: rotateZ(45deg);
+    }
+
+    .speedo_progress {
+        width: 187px;
+        height: 98px;
+        position: absolute;
+        top: 314px;
+        left: 783px;
+        overflow: hidden;
+    }
+
+    .speedo_indicator {
+        width: 187px;
+        height: 187px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border-top: 16px solid #223354;
+        border-right: 16px solid #223354;
+        border-bottom: 16px solid #223354;
+        border-left: 16px solid #c4c4c4;
+        transform: rotateZ(180deg);
+    }
+
+    .Scores_circle {
+        width: 102px;
+        height: 64px;
+        position: absolute;
+        top: 64px;
+        left: 43px;
+        color: #223354;
+    }
+
+    .Scores_circle .sfp {
+        width: 67px;
+        height: 36px;
+        margin-left: 17px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 35.2px;
+    }
+
+    .Scores_circle span {
+        width: 102px;
+        height: 20px;
+        position: absolute;
+        top: 46px;
+        left: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+
+    }
+
+    .Scores_speedo {
+        width: 102px;
+        height: 50px;
+        position: absolute;
+        top: 48px;
+        left: 43px;
+        color: #223354;
+
+    }
+
+    .Scores_speedo .sfp {
+        width: 67px;
+        height: 36px;
+        margin-left: 20px;
+        gap: 0px;
+        opacity: 0px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 35.2px;
+
+    }
+
+    .Scores_speedo span {
+        width: 102px;
+        height: 20px;
+        position: absolute;
+        top: 33px;
+        left: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        color: #333333;
+    }
+
+
+
+
+
+    .checkpoint {
+        width: 344px;
+        height: 50px;
+        position: absolute;
+        top: 451px;
+        left: 760px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        color: #223354;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .checkp::after {
+        content: '';
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 2px solid #223354;
+        position: absolute;
+        top: 26px;
+        left: 22px;
+    }
+
+    .check_p1::before {
+        content: '';
+        width: 120px;
+        height: 8px;
+        position: absolute;
+        top: 34px;
+        left: 37px;
+        background: #223354;
+
+    }
+
+    .check_p2::before {
+        content: '';
+        width: 120px;
+        height: 8px;
+        position: absolute;
+        top: 34px;
+        left: 179px;
+        background: #E0E0E0;
+
+    }
+
+    .check_p1::after {
+        background: #223354;
+        color: white;
+    }
+
+    .check_p2::after {
+        border: 2px solid #223354;
+        background: white;
+        left: 156px;
+    }
+
+    .check_p3::after {
+        border: 2px solid #E0E0E0;
+        left: 298px;
+    }
+
+
+
+
+    .tool_tip {
+        width: 587px;
+        height: 538px;
+        position: absolute;
+        top: 1095px;
+        left: 517px;
+        color: #bdbdbd;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        z-index: -50;
+    }
+
+    .small_topics {
+        width: 304px;
+        height: 102px;
+        position: absolute;
+        top: 42px;
+        left: 1px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        z-index: -48;
+
+    }
+
+    .small_tools {
+        width: 143px;
+        height: 36px;
+        box-sizing: border-box;
+        padding: 8px 16px 8px 16px;
+        border-radius: 10px;
+        background: #223354;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+    .small_tools3,
+    .small_tools4 {
+        align-self: end;
+    }
+
+    .small_tools2,
+    .small_tools4 {
+        justify-self: end;
+    }
+
+    .small_tools span {
+        width: 20.92px;
+        height: 20.92px;
+        border-radius: 4px;
+        position: absolute;
+        background: #223354;
+        transform: rotateZ(44.48deg);
+    }
+
+    .small_tpn1 {
+        top: 17.83px;
+        left: 57px;
+        z-index: -1;
+    }
+
+    .small_tpn2 {
+        top: 8px;
+        left: 125px;
+        z-index: -2;
+    }
+
+    .small_tpn3 {
+        top: -3px;
+        left: 57px;
+        z-index: -3;
+    }
+
+    .small_tpn4 {
+        top: 8px;
+        left: -3px;
+        z-index: -4;
+    }
+
+    .medium_topics {
+        width: 200px;
+        height: 129px;
+        position: absolute;
+        top: 42px;
+        left: 387px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .medium_tools {
+        width: 90px;
+        height: 55px;
+        padding: 18px 0 16px 0;
+        border-radius: 10px;
+        background: #223354;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        color: #FFFFFF;
+        position: relative;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .medium_tools3,
+    .medium_tools4 {
+        align-self: end;
+    }
+
+    .medium_tools2,
+    .medium_tools4 {
+        justify-self: end;
+    }
+
+    .medium_tools span {
+        width: 21.11px;
+        height: 21.11px;
+        border-radius: 4px;
+        position: absolute;
+        background: #223354;
+        transform: rotateZ(45deg);
+    }
+
+    .medium_tpn1 {
+        top: 37.89px;
+        left: 31px;
+        z-index: -1;
+    }
+
+    .medium_tpn2 {
+        top: 17px;
+        left: -4px;
+        z-index: -2;
+    }
+
+    .medium_tpn3 {
+        top: 17px;
+        right: -4px;
+        z-index: -3;
+    }
+
+    .medium_tpn4 {
+        top: -4px;
+        left: 34px;
+        z-index: -4;
+    }
+
+    .large_topics {
+        width: 587px;
+        height: 307px;
+        position: absolute;
+        top: 231px;
+        left: 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .large_tools {
+        width: 279px;
+        height: 127px;
+        padding: 24px 16px;
+        border-radius: 10px;
+        background: #223354;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        color: #FFFFFF;
+        position: relative;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22.4px;
+        text-align: center;
+    }
+
+    .large_tools3,
+    .large_tools4 {
+        align-self: end;
+    }
+
+    .large_tools2,
+    .large_tools4 {
+        justify-self: end;
+    }
+
+    .large_tools span {
+        width: 27.47px;
+        height: 27.47px;
+        border-radius: 8px;
+        position: absolute;
+        background: #223354;
+        transform: rotateZ(45deg);
+    }
+
+    .large_tpn1 {
+        top: 110.74px;
+        left: 120px;
+        z-index: -1;
+    }
+
+    .large_tpn2 {
+        top: -8px;
+        left: 120.82px;
+        z-index: -2;
+    }
+
+    .large_tpn3 {
+        top: 49.76px;
+        right: -9px;
+        z-index: -3;
+    }
+
+    .large_tpn4 {
+        top: 49.76px;
+        left: -8px;
+        z-index: -4;
+    }
+
+    .learn_more {
+        width: 248px;
+        height: 42px;
+        border-radius: 8px;
+        background: #1AB4D7;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19.6px;
+        color: white;
+        text-align: center;
+        padding: 13px 0 15px 0;
+        margin-top: 5px;
+        box-sizing: border-box;
+
+    }
+
+    .avatar {
+        width: 328px;
+        height: 111px;
+        position: absolute;
+        top: 735px;
+        left: 517px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #bdbdbd;
+    }
+
+    .avatar div {
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        top: 47px;
+    }
+
+    .yahya {
+        left: 0;
+    }
+
+    .saitama {
+        left: 88px;
+    }
+
+    .sasuke {
+        left: 176px;
+    }
+
+    .erwin {
+        left: 264px;
+    }
+
+    .avatar_badges {
+        width: 435px;
+        height: 153px;
+        position: absolute;
+        top: 894px;
+        left: 517px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #bdbdbd;
+    }
+
+    .icon_badges {
+        width: 230px;
+        height: 26px;
+        position: absolute;
+        top: 42px;
+        left: 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icon_badges div {
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        padding: 1.5px 0px;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+    .ic_1 {
+        background: #1AB4D7;
+
+    }
+
+    .ic_2 {
+        background: #27AE60;
+        color: white;
+    }
+
+    .ic_3 {
+        background: #E2B93B;
+
+    }
+
+    .ic_4 {
+        background: #EB5757;
+
+    }
+
+    .ic_5 {
+        background: #2F80ED;
+        border: 2px solid #2F80ED
+    }
+
+    .ic_6 {
+        background: #223354;
+        border: 2px solid #223354
+    }
+
+    .numeric_badges {
+        width: 187px;
+        height: 24px;
+        position: absolute;
+        top: 41px;
+        left: 248px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .numeric_badges div {
+        width: fit-content;
+        padding: 2px 7px 2px 7px;
+        background: #1AB4D7;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
+
+    .example_avatar {
+        width: 64px;
+        height: 70px;
+        position: absolute;
+        top: 83px;
+        left: 0px;
+    }
+
+    .example_icon {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 114px;
+        left: 118px;
+    }
+
+    .example_numeric {
+        width: 207px;
+        height: 54px;
+        position: absolute;
+        top: 92px;
+        left: 210px;
+    }
+
+    .section {
+        width: 207px;
+        height: 54px;
+        position: absolute;
+        top: 21px;
+        left: 0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #223354;
+        color: #828282;
+    }
+
+    .first {
+        width: 100px;
+        height: 33px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        color: #333333;
+    }
+
+    .first::after {
+        content: '';
+        width: 100px;
+        height: 4px;
+        position: absolute;
+        top: 33px;
+        left: 0;
+        background: #223354;
+        color: #828282;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22.4px;
+        text-align: center;
+        color: #828282;
+    }
+
+    .second {
+        width: 100px;
+        height: 33px;
+        position: absolute;
+        top: 1px;
+        left: 100px;
+        color: #828282;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22.4px;
+    }
+
+    .second::after {
+        content: '';
+        width: 100px;
+        height: 0px;
+        position: absolute;
+        top: 32px;
+        left: 0px;
+        border: 2px solid #E0E0E0;
+    }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">07. <span>Small Elements</span></h1>
+    <div class="file_upload">
+        File Upload
+        <div class="small_form_upload">
+            <div class="small_file_upload">
+                <input type="file" name="fileupload" id="file-input" class="file-input">
+                <label for="file-input" class="file-label">Select a File</label>
+                <span id="file-name" class="file-name">No file selected</span>
+            </div>
+            <div class="small_progress_upload">
+                <div class="small_box">
+                    <div class="sample"><i class="fa fa-file-alt" aria-hidden="true"></i> &nbsp &nbspsample image</div>
+                    <div class="sympol">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="finish_upload">
+                <div class="small_box">
+                    <div class="sample"><i class="fa fa-file-alt" aria-hidden="true"></i> &nbsp &nbsp sample image</div>
+                    <div class="sympol" style="color: #27ae60; font-size: 36px;"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big_form_upload">
+            <div class="empty_upload">
+                <span class="pl1">Upload File</span>
+                <label class="big_file_empty_drag_container" for="big_file_empty">
+                    <input type="file" id="big_file_empty" class="big_file_empty_input">
+                    <div class="drg_ctr">
+                        <i class="fa fa-file-alt" aria-hidden="true"></i>
+                        <label for="big_file_empty" class="lbl1">Drag n Drop here</label>
+                        <label class="lbl2">Or</label>
+                        <label for="big_file_empty" class="in_box_lbl">Browse</label>
+                    </div>
+                </label>
+                <label for="big_file_empty" class="big_empty_upload_button">Upload Now</label>
+            </div>
+            <div class="hover_upload">
+                <span class="pl1">Upload File</span>
+                <label class="big_file_empty_drag_container" for="big_file_empty">
+                    <input type="file" id="big_file_empty" class="big_file_empty_input">
+                    <div class="drg_ctr">
+                        <i class="fa fa-file-alt" aria-hidden="true"></i>
+                        <label for="big_file_empty" class="lbl1">Drag n Drop here</label>
+                        <label class="lbl2">Or</label>
+                        <label for="big_file_empty" class="in_box_lbl">Browse</label>
+                    </div>
+                </label>
+                <label for="big_file_empty" class="big_empty_upload_button">Upload Now</label>
+            </div>
+            <div class="big_progress_upload">
+                <span class="pl1">Upload File</span>
+                <label class="big_file_empty_drag_container" for="big_file_empty">
+                    <input type="file" id="big_file_empty" class="big_file_empty_input">
+                    <div class="image_sympol">
+                        <i class="fa fa-image" aria-hidden="true"></i>
+                        <sapn>Sample.png</sapn>
+                    </div>
+                    <div class="half_bar">
+                        <div class="half"></div>
+                    </div>
+                </label>
+                <label for="big_file_empty" class="big_empty_upload_button">Upload Now</label>
+            </div>
+        </div>
+    </div>
+    <div class="progress_bar">
+        Progress
+        <div class="half_progress">
+            <div class="half_bar_progress">
+                <div class="half_centerd"></div>
+            </div>
+            <span>5 of 10 progress</span>
+        </div>
+    </div>
+    <div class="circle_progress">
+        <div class="Scores_circle">
+            <div class="sfp">75%</div>
+            <span>3 of 4 progress</span>
+        </div>
+        <div class="circle_indicator"></div>
+    </div>
+    <div class="speedo_progress">
+        <div class="Scores_speedo">
+            <div class="sfp">75%</div>
+            <span>3 of 4 progress</span>
+        </div>
+        <div class="speedo_indicator"></div>
+    </div>
+    <div class="checkpoint">
+        <div class="check_p1 checkp">Progress 1</div>
+        <div class="check_p2 checkp">Progress 2</div>
+        <div class="check_p3 checkp">Progress 3</div>
+    </div>
+    <div class="badges">
+        Tags
+        <div class="badges_1">
+            <div class="primary">Primary</div>
+            <div class="secondary">Secondary</div>
+            <div class="success">Success</div>
+            <div class="info">Info</div>
+            <div class="danger">Danger</div>
+        </div>
+        <div class="badges_2">
+            <div class="warn">Warning</div>
+            <div class="light">Light</div>
+            <div class="dark">Dark</div>
+        </div>
+    </div>
+    <div class="avatar">
+        Avatar
+        <img src="https://i.postimg.cc/6pPd8jCr/Yahya.png" class="yahya"></img>
+        <img src="https://i.postimg.cc/DyysBkgQ/Pak-Ogah.png" class="saitama"></img>
+        <img src="https://i.postimg.cc/vTGnJpds/Sasuke.png" class="sasuke"></img>
+        <img src="https://i.postimg.cc/Hn3MdBp7/Avatar-3.png" class="erwin"></img>
+    </div>
+    <div class="avatar_badges">
+        Badges
+        <div class="icon_badges">
+            <div class="ic_1"></div>
+            <div class="ic_2"><i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+            <div class="ic_3"><i class="fa fa-exclamation"></i></div>
+            <div class="ic_4"><i class="fa fa-times" aria-hidden="true"></i></div>
+            <div class="ic_5"><i class="fa fa-sync" aria-hidden="true"></i>
+            </div>
+            <div class="ic_6"><i class="far fa-clock" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="numeric_badges">
+            <div class="numeric1">0</div>
+            <div class="numeric2">9</div>
+            <div class="numeric3">99+</div>
+            <div class="numeric4">999+</div>
+        </div>
+        <div class="example_avatar"><img src="https://i.postimg.cc/6pPd8jCr/Yahya.png" alt=""></div>
+        <div class="example_icon"><i class="fa fa-bell" aria-hidden="true"></i>
+        </div>
+        <div class="example_numeric">
+            <div class="section">
+                <div class="first">Section 1</div>
+                <div class="second">Section 2</div>
+            </div>
+        </div>
+    </div>
+    <div class="tool_tip">
+        Tooltips
+        <div class="small_topics">
+            <div class="small_tools1 small_tools">
+                <span class="small_tpn1"></span>
+                Example Tooltip
+            </div>
+            <div class="small_tools2 small_tools">
+                <span class="small_tpn2"></span>
+                Example Tooltip
+            </div>
+            <div class="small_tools3 small_tools">
+                <span class="small_tpn3"></span>
+                Example Tooltip
+            </div>
+            <div class="small_tools4 small_tools">
+                <span class="small_tpn4"></span>
+                Example Tooltip
+            </div>
+        </div>
+        <div class="medium_topics">
+            <div class="medium_tools1 medium_tools">
+                Tooltip
+                <span class="medium_tpn1"></span>
+            </div>
+            <div class="medium_tools2 medium_tools">
+                Tooltip
+                <span class="medium_tpn2"></span>
+            </div>
+            <div class="medium_tools3 medium_tools">
+                Tooltip
+                <span class="medium_tpn3"></span>
+            </div>
+            <div class="medium_tools4 medium_tools">
+                Tooltip
+                <span class="medium_tpn4"></span>
+            </div>
+        </div>
+        <div class="large_topics">
+            <div class="large_tools1 large_tools">
+                Variable are for remembering something for later
+                <span class="large_tpn1"></span>
+                <div class="learn_more">Learn More</div>
+            </div>
+            <div class="large_tools2 large_tools">
+                Variable are for remembering something for later
+                <span class="large_tpn2"></span>
+                <div class="learn_more">Learn More</div>
+            </div>
+            <div class="large_tools3 large_tools">
+                Variable are for remembering something for later
+                <span class="large_tpn3"></span>
+                <div class="learn_more">Learn More</div>
+            </div>
+            <div class="large_tools4 large_tools">
+                Variable are for remembering something for later
+                <span class="large_tpn4"></span>
+                <div class="learn_more">Learn More</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
