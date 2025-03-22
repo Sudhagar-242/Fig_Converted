@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CARDS</title>
+    <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    body {
+        width: 1152px;
+        height: 1798px;
+        font-family: "Inter", sans-serif;
+    }
+
+    .headings {
+        width: 260px;
+        height: 62px;
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 61.6px;
+        color: #223354;
+    }
+
+    .headings span {
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 61.6px;
+    }
+
+    .carousel {
+        width: 1056px;
+        height: 623px;
+        position: absolute;
+        top: 174px;
+        left: 48px;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+        color: #bdbdbd;
+
+    }
+
+    .gallery-container {
+        width: 1056px;
+        height: 576px;
+        position: absolute;
+        top: 48px;
+        left: 0px;
+        border-radius: 24px;
+    }
+
+    .gallery {
+        display: flex;
+    }
+
+    .img-card {
+        width: 1056px;
+        height: 576px;
+        display: none;
+        color: white;
+        overflow: hidden;
+    }
+
+    .carousal1 {
+        display: block;
+    }
+
+    .img-card img {
+        position: absolute;
+        width: 1056px;
+        height: 576px;
+        border-radius: 16px;
+    }
+
+    .crl_head {
+        width: 350px;
+        height: 44px;
+        position: absolute;
+        top: 217px;
+        left: 150px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: 0%;
+        transition: all 1s linear;
+    }
+
+    .crl_text {
+        width: 745px;
+        height: 59px;
+        position: absolute;
+        top: 277px;
+        left: 150px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        transition: all 1s linear;
+    }
+
+    .crl_button {
+        width: 182px;
+        height: 62px;
+        box-sizing: border-box;
+        background: #1AB4D7;
+        position: absolute;
+        top: 368px;
+        left: 150px;
+        border-radius: 8px;
+        padding-top: 18px;
+        padding-right: 32px;
+        padding-bottom: 18px;
+        padding-left: 32px;
+        gap: 10px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25.2px;
+        letter-spacing: 0%;
+        color: white;
+        transition: all 1s linear;
+    }
+
+    .crl_indicators {
+        display: flex;
+        justify-content: space-between;
+        width: 60px;
+        height: 8px;
+        position: absolute;
+        top: 520px;
+        left: 498px;
+    }
+
+    .span-element {
+        width: 8px;
+        background: rgba(255, 255, 255, 0.56);
+        border-radius: 50%;
+    }
+
+    .span-element:first-child {
+        width: 40px;
+        height: 8px;
+        border-radius: 30px;
+        background: white;
+    }
+
+    .crl_buttons {
+        width: 928px;
+        height: 32px;
+        position: absolute;
+        top: 272px;
+        left: 64px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .crl_buttons button {
+        width: 32px;
+        height: 32px;
+        background-color: rgba(224, 224, 224, 0.32);
+        box-sizing: border-box;
+        /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        border-radius: 50%;
+    }
+
+    .cards {
+        width: 1065px;
+        height: 904px;
+        position: absolute;
+        top: 845px;
+        left: 43px;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22.4px;
+        color: #bdbdbd;
+    }
+
+    .cards {
+        width: 1065px;
+        height: 904px;
+        position: absolute;
+        top: 845px;
+        left: 43px;
+    }
+
+    .imagecards {
+        width: 1057px;
+        height: 550px;
+        position: absolute;
+        top: 30px;
+        left: 4px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .image_card {
+        width: 325px;
+    }
+
+    .image_card_1 {
+        width: 325px;
+        height: 477px;
+        border-radius: 8px;
+        background: white;
+    }
+
+    .image_card_1::after {
+        content: "";
+        width: 296px;
+        height: 236px;
+        position: absolute;
+        top: 241px;
+        left: 24px;
+        background: transparent;
+        box-shadow: -10px 4px 36px 14px #BDBDBDCC;
+        z-index: -50;
+    }
+
+
+    .image_card_2 {
+        height: 550px;
+        background: white;
+    }
+
+    .image_card_2::after {
+        content: "";
+        width: 296px;
+        height: 236px;
+        position: absolute;
+        top: 296px;
+        left: 388px;
+        background: transparent;
+        box-shadow: -8px 18px 36px 10px #BDBDBDCC;
+        z-index: -50;
+    }
+
+    .image_card_3 {
+        width: 326px;
+        height: 546px;
+        overflow: hidden;
+    }
+
+    .image_card_1 img,
+    .image_card_2 img {
+        width: 325px;
+        height: 297px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .image_card_3 img {
+        height: 546px;
+        border-radius: 8px;
+    }
+
+    .ic1_body,
+    .ic2_body {
+        width: 277px;
+        height: 126px;
+        padding-left: 24px;
+        position: absolute;
+        top: 321px;
+        color: #223354;
+    }
+
+    .ic3_body {
+        width: 277px;
+        height: 126px;
+        padding-left: 24px;
+        position: absolute;
+        top: 317px;
+        color: white;
+    }
+
+    .ic1_tittle,
+    .ic2_tittle,
+    .ic3_tittle {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    .ic1_ctx,
+    .ic2_ctx {
+        width: 277px;
+        height: 91px;
+        position: absolute;
+        top: 35px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+
+    }
+
+    .ic3_ctx {
+        width: 277px;
+        height: 91px;
+        position: absolute;
+        top: 31px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+
+    }
+
+    .ic2_link {
+        width: 277px;
+        height: 55px;
+        box-sizing: border-box;
+        margin-left: 24px;
+        position: absolute;
+        top: 471px;
+        border-radius: 8px;
+        padding: 16px 0;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        background: #223354;
+
+    }
+
+    .ic3_link {
+        width: 278px;
+        height: 55px;
+        box-sizing: border-box;
+        margin-left: 24px;
+        position: absolute;
+        top: 467px;
+        border-radius: 8px;
+        padding: 16.5px 0;
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        color: white;
+        background: #1ab4d7;
+    }
+
+    .textCards {
+        width: 1065px;
+        height: 263px;
+        position: absolute;
+        top: 641px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        padding-left: 5px;
+    }
+
+    .textCards>div {
+        border-radius: 8px;
+    }
+
+    .cardcolored {
+        width: 266px;
+        height: 236px;
+        background: #223354;
+        color: white;
+
+    }
+
+    .cardcolored::after {
+        content: "";
+        width: 249px;
+        height: 222px;
+        position: absolute;
+        z-index: -33;
+        top: 10px;
+        left: 9px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 36px 10px #22335466;
+    }
+
+    .cardborder {
+        width: 266px;
+        height: 236px;
+        color: #223354;
+        border: 1px solid #223354;
+        background: white;
+    }
+
+    .cardborder::after {
+        content: "";
+        width: 249px;
+        height: 226px;
+        position: absolute;
+        z-index: -44;
+        top: 10px;
+        margin-left: 9px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 36px 8px #2233544D;
+    }
+
+    .cc_header {
+        width: 266px;
+        height: 63px;
+        border-bottom: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        padding: 24px 0 0 24px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+    }
+
+    .cc_body {
+        width: 218px;
+        height: 126px;
+        box-sizing: border-box;
+        padding-left: 24px;
+        position: absolute;
+        top: 79px;
+    }
+
+    .ccb_heading {
+        width: 213px;
+        height: 27px;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26.4px;
+        letter-spacing: 0%;
+    }
+
+    .ccb_body {
+        width: 218px;
+        height: 91px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 35px;
+    }
+
+    .cardborder .cc_header {
+        border-bottom: 1px solid #223354;
+    }
+
+    .cardtext {
+        width: 244px;
+        height: 213px;
+        box-sizing: border-box;
+        padding: 24px;
+        background: white;
+        box-shadow: 0px 8px 16px 0px #00000029
+    }
+
+    .ct_top {
+        width: 116px;
+        height: 58px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ct_tittle {
+        width: 116px;
+        height: 27px;
+
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26.4px;
+        letter-spacing: 0%;
+        color: #223354;
+    }
+
+    .ct_sub {
+        width: 99px;
+        height: 23px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+        color: #bdbdbd;
+    }
+
+    .ct_body {
+        width: 195px;
+        height: 91px;
+        box-sizing: border-box;
+        padding-left: 1px;
+        position: absolute;
+        top: 98px;
+        font-family: Inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22.4px;
+        letter-spacing: 0%;
+        color: #333333;
+
+    }
+
+    .cardcta {
+        width: 250px;
+        height: 277px;
+        box-sizing: border-box;
+        padding: 24px 24px;
+        background: white;
+    }
+
+    .cta_link {
+        width: 197px;
+        height: 48px;
+        position: absolute;
+        top: 205px;
+        border-radius: 6px;
+        background: #223354;
+        color: white;
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19.6px;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+    .cardcta::after {
+        content: "";
+        width: 223px;
+        height: 268px;
+        position: absolute;
+        top: 0;
+        z-index: -55;
+        border-radius: 8px;
+        box-shadow: -7px 8px 36px 4px #BDBDBDCC;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="headings">09. <span>Cards</span></div>
+    <div class="carousel">
+        Carousel
+        <div class="gallery-container">
+            <div class="gallery" id="gallery">
+                <div class="carousal1 img-card">
+                    <img src="https://i.postimg.cc/sfkgPRB7/man-sitting-in-the-bench.jpg" alt="man sitting in the bench">
+                    <div class="crl_head">Example Headline</div>
+                    <div class="crl_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="crl_button">Call to Action</div>
+                </div>
+                <div class="carousal2 img-card">
+                    <img src="https://mdn.github.io/learning-area/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg" alt="man sitting in the bench">
+                    <div class="crl_head">Example Headline</div>
+                    <div class="crl_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="crl_button">Call to Action</div>
+                </div>
+                <div class="carousal3 img-card">
+                    <img src="https://www.stockvault.net/data/2007/03/01/102413/preview16.jpg" alt="man sitting in the bench">
+                    <div class="crl_head">Example Headline</div>
+                    <div class="crl_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="crl_button">Call to Action</div>
+                </div>
+            </div>
+            <div class="crl_indicators">
+                <span class="span-element"></span>
+                <span class="span-element"></span>
+                <span class="span-element"></span>
+            </div>
+            <div class="crl_buttons">
+                <button onclick="changeWidth(true)">‹</button>
+                <button onclick="changeWidth(false)">›</button>
+            </div>
+        </div>
+    </div>
+    <div class="cards">
+        Cards
+        <div class="imagecards">
+            <div class="image_card_1 image_card ">
+                <img src="https://i.postimg.cc/HWyCffP5/mountain.jpg">
+                <div class="ic1_body">
+                    <div class="ic1_tittle">Card Title</div>
+                    <div class="ic1_ctx">Some quick example text to build on the card title and make up the bulk of the card's content. make up the bulk of the card's content.</div>
+                </div>
+            </div>
+            <div class="image_card_2  image_card ctaimage">
+                <img src="https://i.postimg.cc/vZQFxD8L/southern.jpg">
+                <div class="ic2_body">
+                    <div class="ic2_tittle">Card Title</div>
+                    <div class="ic2_ctx">Some quick example text to build on the card title and make up the bulk of the card's content. make up the bulk of the card's content.</div>
+                </div>
+                <div class="ic2_link">Link</div>
+            </div>
+            <div class="image_card_3  image_card fulimage">
+                <img src="https://i.postimg.cc/vHpdz9FW/Rectangle-42.png">
+                <div class="ic3_body">
+                    <div class="ic3_tittle">Card Title</div>
+                    <div class="ic3_ctx">Some quick example text to build on the card title and make up the bulk of the card's content. make up the bulk of the card's content.</div>
+                </div>
+                <div class="ic3_link">Read More</div>
+            </div>
+        </div>
+        <div class="textCards">
+            <div class="cardcolored">
+                <div class="cc_header">Header</div>
+                <div class="cc_body">
+                    <div class="ccb_heading">Primary Card Title</div>
+                    <div class="ccb_body">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
+                </div>
+            </div>
+            <div class="cardborder">
+                <div class="cc_header">Header</div>
+                <div class="cc_body">
+                    <div class="ccb_heading">Primary Card Title</div>
+                    <div class="ccb_body">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
+                </div>
+            </div>
+            <div class="cardtext">
+                <div class="ct_top">
+                    <div class="ct_tittle">Card Title</div>
+                    <div class="ct_sub">Card Subtitle</div>
+                </div>
+                <div class="ct_body">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
+            </div>
+            <div class="cardcta">
+                <div class="ct_top">
+                    <div class="ct_sub">Card Subtitle</div>
+                    <div class="ct_tittle">Card Title</div>
+                </div>
+                <div class="ct_body">Some quick example text to build on the card title and make up the bulk of the card's content.</div>
+                <div class="cta_link">Link</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+    let index = 1;
+
+    function changeWidth(reverse) {
+        const spans = document.querySelectorAll('.span-element');
+        const gallery = document.querySelectorAll('.img-card');
+        spans.forEach(span => {
+            span.style.width = '8px';
+            span.style.height = '8px';
+            span.style.background = 'rgba(255, 255, 255, 0.56)';
+        });
+        gallery.forEach(gallery => {
+            gallery.style.width = '0px';
+            gallery.style.display = 'none';
+        });
+        spans[index].style.width = '40px';
+        spans[index].style.height = '8px';
+        spans[index].style.borderRadius = '30px';
+        spans[index].style.background = 'rgba(255, 255, 255, 1)';
+        gallery[index].style.width = '100%';
+        gallery[index].style.display = 'block';
+        index = (reverse == true) ? (index - 1 + spans.length) % spans.length : (index + 1) % spans.length;
+
+    }
+    </script>
+</body>
+
+</html>
