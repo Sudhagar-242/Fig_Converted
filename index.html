@@ -3,8 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto-scaling iframe</title>
+  <title>Figma to HTML,CSS and JavaScript</title>
   <style>
+    body{
+        box-sizing: border-box;
+        background: slategray;
+    }
+    h1{
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+            color: #fff;
+        }
+
+        .container{
+            margin: 3%;
+        }
 
     .iframe-wrapper {
       width: 100%;  
@@ -12,59 +34,72 @@
       position: relative;
       overflow: hidden;
       display: inline-block;
-      margin: 10px;
+      margin: 0 2rem ;
     }
 
     iframe {
-      border: none;
-      position: absolute;
-      top: 0;
-      left: 0;
+        position: absolute;
       transform-origin: top left; 
       transform: scale(1); 
+    }
   </style>
 </head>
 <body>
 
-<h2>Auto-scaling Iframe Based on Container Size</h2>
+<h1>All Converted Figma Designs Showcase </h1><hr/>
+<p>This Page combines ten different designs into one page, showcasing multiple styles and layouts.
+    Each design, originally made in Figma, has been converted into HTML, CSS, and JavaScript.
+    By merging them into a single file, it allows easy browsing of all designs without switching between pages, 
+    making it a quick and efficient way to explore various UI/UX styles in one place.
+    <br/>(may have latency due to fetch 10 html file)</p>
 
 <div class="container" >
+    <h1>01 Colors</h1>
 <div class="iframe-wrapper" id="iframeWrapper1">
   <iframe src="01 Colors.html" id="iframe1"></iframe>
 </div>
 
+    <h1>02 Typography</h1>
 <div class="iframe-wrapper" id="iframeWrapper2">
   <iframe src="02 Typography.html" id="iframe2"></iframe>
 </div>
 
+    <h1>03 Iconography</h1>
 <div class="iframe-wrapper" id="iframeWrapper3">
   <iframe src="03 Iconography.html" id="iframe3"></iframe>
 </div>
 
+    <h1>04 Textfields</h1>
 <div class="iframe-wrapper" id="iframeWrapper4">
   <iframe src="04 Textfields.html" id="iframe4"></iframe>
 </div>
 
+    <h1>05 Selectors</h1>
 <div class="iframe-wrapper" id="iframeWrapper5">
   <iframe src="05 Selectors.html" id="iframe5"></iframe>
 </div>
 
+    <h1>06 Buttons</h1>
 <div class="iframe-wrapper" id="iframeWrapper6">
   <iframe src="06 Buttons.html" id="iframe6"></iframe>
 </div>
 
+    <h1>07 Small Elements</h1>
 <div class="iframe-wrapper" id="iframeWrapper7">
   <iframe src="07 Small Elements.html" id="iframe7"></iframe>
 </div>
 
+    <h1>08 Big Elements<h1>
 <div class="iframe-wrapper" id="iframeWrapper8">
   <iframe src="08 Big Elements.html" id="iframe8"></iframe>
 </div>
 
+    <h1>09 Cards</h1>
 <div class="iframe-wrapper" id="iframeWrapper9">
   <iframe src="09 Cards.html" id="iframe9"></iframe>
 </div>
 
+    <h1>10 Images</h1>
 <div class="iframe-wrapper" id="iframeWrapper10">
   <iframe src="10 Images.html" id="iframe10"></iframe>
 </div>
@@ -78,7 +113,6 @@
 
   function scaleIframe(iframe, iframeWrapper) {
     iframe.onload = () => {
-      try {
         const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
         const contentWidth = iframeDoc.body.scrollWidth; 
         const contentHeight = iframeDoc.body.scrollHeight; 
@@ -98,9 +132,6 @@
 
         iframe.style.left = (wrapperWidth - contentWidth * scale) / 2 + 'px';
         iframe.style.top = (wrapperHeight - contentHeight * scale) / 2 + 'px';
-      } catch (e) {
-        console.error("Error scaling iframe content:", e);
-      }
     };
   }
 function OnLoadProject(){
