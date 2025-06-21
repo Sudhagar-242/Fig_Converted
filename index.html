@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto-scaling iframe</title>
+  <style>
+
+    .iframe-wrapper {
+      width: 100%;  
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    iframe {
+      border: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: top left; 
+      transform: scale(1); 
+  </style>
+</head>
+<body>
+
+<h2>Auto-scaling Iframe Based on Container Size</h2>
+
+<div class="container" >
+<div class="iframe-wrapper" id="iframeWrapper1">
+  <iframe src="01 Colors.html" id="iframe1"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper2">
+  <iframe src="02 Typography.html" id="iframe2"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper3">
+  <iframe src="03 Iconography.html" id="iframe3"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper4">
+  <iframe src="04 Textfields.html" id="iframe4"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper5">
+  <iframe src="05 Selectors.html" id="iframe5"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper6">
+  <iframe src="06 Buttons.html" id="iframe6"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper7">
+  <iframe src="07 Small Elements.html" id="iframe7"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper8">
+  <iframe src="08 Big Elements.html" id="iframe8"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper9">
+  <iframe src="09 Cards.html" id="iframe9"></iframe>
+</div>
+
+<div class="iframe-wrapper" id="iframeWrapper10">
+  <iframe src="10 Images.html" id="iframe10"></iframe>
+</div>
+
+
+</div>
+
+<script>
+
+    OnLoadProject();
+
+  function scaleIframe(iframe, iframeWrapper) {
+    iframe.onload = () => {
+      try {
+        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const contentWidth = iframeDoc.body.scrollWidth; 
+        const contentHeight = iframeDoc.body.scrollHeight; 
+
+        const wrapperWidth = iframeWrapper.offsetWidth; 
+        const wrapperHeight = iframeWrapper.offsetHeight; 
+
+      const scaleX = wrapperWidth / contentWidth;
+        const scaleY = wrapperHeight / contentHeight;
+
+        const scale = Math.min(scaleX, scaleY);
+
+        iframe.style.width = contentWidth + 'px';
+        iframe.style.height = contentHeight + 'px';
+
+        iframe.style.transform = `scale(${scale})`;
+
+        iframe.style.left = (wrapperWidth - contentWidth * scale) / 2 + 'px';
+        iframe.style.top = (wrapperHeight - contentHeight * scale) / 2 + 'px';
+      } catch (e) {
+        console.error("Error scaling iframe content:", e);
+      }
+    };
+  }
+function OnLoadProject(){
+  document.querySelectorAll('iframe').forEach((iframe, index) => {
+    const iframeWrapper = document.getElementById(`iframeWrapper${index + 1}`);
+    scaleIframe(iframe, iframeWrapper);
+  });
+}
+</script>
+
+</body>
+</html>
