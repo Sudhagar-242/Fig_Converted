@@ -17,3 +17,7 @@
 
 <h2>Figma Design</h2>
 <p>Original design can be found <a href="https://www.figma.com/design/Zqr5zJjqDmNbsTKH3RCUge/Trainees?node-id=33-2165&p=f">here</a></p>
+
+
+<h2>Deployed & Preview</h2>
+<p>You can access aand preview all the projects<a href="https://sudhagar-242.github.io/Fig_Converted">here</a></p>
