@@ -1,5 +1,4 @@
 <h1>Converts Figma Projects in to HTML,CSS and JavaScript Code</h1>
-<hr></hr>
 
 <h2>Features</h2>
 <ul>
@@ -11,7 +10,7 @@
 
 <h2>Tech Stack</h2>
 <ul>
-    <li>HTML%</li>
+    <li>HTML5</li>
     <li>CSS3 / Flexbox / Grid</li>
     <li>JavaScript (Vanilla JS)</li>
 </ul>
